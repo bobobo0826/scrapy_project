@@ -1,0 +1,35 @@
+中国新闻网
+终端输入：scrapy crawl zg_newsSpider
+Enter your startTime(20181101):（输入爬取的开始时间）
+Enter your endTime(20181101):（输入爬取的结束时间）
+
+日志：
+1：日志文件本身要输出
+2：报告状态到 Mysql
+   2.1: 每小时输出一次状态报告（xx-xx 时间内，采集x网站多少页面，Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)）
+   2.2：每次下载结束（xx时间，xx网站，共采集xx页面，耗时xx分钟）
+
+网站、报告时间、报告类型、报告内容
+
+url 管理：
+1：url 记录 ，下载状态、解析状态、处理时间（Mysql 批处理）
+网站、url、来源url、类型、下载状态、解析状态、处理时间
+所有该网站的url（包括deny）
+
+下载器：
+1：内容页 和 list页 区分？
+2：代码结构 （如何统一）
+3：效率???
+
+解析url：
+1：代码结构 （如何统一）
+  优先根据url本身的规则来区分
+  其次通过来源、内容区分
+
+解析内容：
+1：代码结构 （如何统一）
+   title:xpath1、xpath2、xpath3
+
+输出：
+1：写文件
+   统一item的定义，统一文件的目录结构，生成规则
